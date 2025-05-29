@@ -6,7 +6,7 @@ FROM golang:1.22-alpine AS builder
 WORKDIR /app
 
 # Copy go.mod and go.sum files to download dependencies
-COPY go.mod go.sum ./
+COPY go.mod ./
 
 # Download all dependencies. Dependencies will be cached if the go.mod and go.sum files are unchanged
 RUN go mod download
